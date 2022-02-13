@@ -1,0 +1,9 @@
+@import './_basecard';
+
+$left-logo-max-width: 350px;
+$xbox-green: #107c10;
+$xbox-lime-green: #9bf00b;
+
+#xbox {
+    @include basecard;
+}

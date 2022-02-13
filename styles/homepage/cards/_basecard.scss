@@ -1,0 +1,88 @@
+$left-logo-max-width: 350px;
+
+@mixin basecard {
+    .basecard {
+        width: 100%;
+        height: 400px;
+        margin: 140px 0px;
+        background: $grey;
+        color: $white;
+        position: relative;
+
+        // Grid
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 2fr max-content;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            background: linear-gradient(90deg, $purple 33.35%, $grey 33.35%);
+            width: 100%;
+            height: 50%;
+            z-index: -1;
+            transform: skewY(-1.1deg);
+            transform-origin: -72px;
+        }
+        
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            background: linear-gradient(90deg, $purple 33.35%, $grey 33.35%);
+            width: 100%;
+            height: 50%;
+            z-index: -1;
+            transform: skewY(-0.7deg);
+            transform-origin: 1920px;
+        }
+
+    
+        .card-left {
+            background: $purple;
+
+            // Grid
+            grid-row-start: 1;
+            grid-row-end: 3;
+
+            // Flex
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .logo-container {
+                width: 90%;
+                max-width: $left-logo-max-width;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+        .card-right {
+            // Flex
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            background: transparent;
+
+            img {
+                width: 30%;
+                max-width: 200px;
+            }
+        }
+
+        a {
+            // Grid
+            justify-self: center;
+            grid-column-start: 2;
+            background-color: $purple;
+            padding: 10px 20px;
+            margin-bottom: 15px;
+        }
+    }
+}

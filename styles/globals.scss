@@ -1,0 +1,34 @@
+// Variables
+$white: #ffffff;
+$black: #000000;
+$grey: #202028;
+$purple: #682cfc;
+
+// Css Reset
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: $white;
+}
+
+// body {
+//   background: linear-gradient(rgba(255, 255, 255, 0.747), rgba(255, 255, 255, 0.788)), 
+//   url('../public/backgrounds/background-pattern.jpg');
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   background-position: top;
+//   background-attachment: fixed;
+// }
+
+// Imports
+
+// Layouts
+@import "./layouts/_footer";
+
+// Homepage
+@import "./homepage/_homepage";

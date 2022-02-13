@@ -1,0 +1,7 @@
+@import './_basecard';
+
+$left-logo-max-width: 220px;
+
+#epic {
+    @include basecard;
+}

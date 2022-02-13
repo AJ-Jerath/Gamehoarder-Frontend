@@ -1,0 +1,7 @@
+@import './_basecard';
+
+$left-logo-max-width: 350px;
+
+#playstation {
+    @include basecard;
+}
