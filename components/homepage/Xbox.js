@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import xboxLogo from '../../public/logos/xbox-logo.svg'
 
-function Xbox() {
+function Xbox(games) {
     return (
         <div id='xbox' className='basecard-container'>
             <div className='basecard'>
@@ -12,10 +12,10 @@ function Xbox() {
                     </div>
                 </div>
                 <div className='card-right xbox-right'>
-                    <img src="https://static-cdn.jtvnw.net/ttv-boxart/Apex%20Legends-285x380.jpg" />
-                    <img src="https://static-cdn.jtvnw.net/ttv-boxart/./Call%20of%20Duty:%20Warzone-285x380.jpg" />
-                    <img src="https://static-cdn.jtvnw.net/ttv-boxart/Apex%20Legends-285x380.jpg" />
-                    <img src="https://static-cdn.jtvnw.net/ttv-boxart/./Call%20of%20Duty:%20Warzone-285x380.jpg" />
+                    {games.xbox.arr.map((game, index) => {
+                        const titleRegEx = game.title.replace(/[*]/g, '');
+                        return <img key={index} src={`https://static-cdn.jtvnw.net/ttv-boxart/${titleRegEx}-285x380.jpg`} />  
+                    })}
                 </div>
                 <a className='link' href="#">Xbox Games</a>
             </div>
