@@ -3,46 +3,37 @@ $left-logo-max-width: 350px;
 @mixin basecard {
     .basecard {
         width: 100%;
-        height: 400px;
-        margin: 140px 0px;
+        margin: 100px 0px;
         background: $grey;
         color: $white;
-        position: relative;
 
-        // Grid
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        grid-template-rows: 2fr max-content;
+        @media only screen and (min-width: 768px) {
+            // Grid
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: 2fr max-content;
 
-        &::before {
-            content: '';
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            background: linear-gradient(90deg, $purple 33.35%, $grey 33.35%);
-            width: 100%;
-            height: 50%;
-            z-index: -1;
-            transform: skewY(-1.1deg);
-            transform-origin: -72px;
-        }
-        
-        &::after {
-            content: '';
-            position: absolute;
-            bottom: 0px;
-            left: 0px;
-            background: linear-gradient(90deg, $purple 33.35%, $grey 33.35%);
-            width: 100%;
-            height: 50%;
-            z-index: -1;
-            transform: skewY(-0.7deg);
-            transform-origin: 1920px;
+            margin: 140px 0px;
         }
 
-    
         .card-left {
             background: $purple;
+            position: relative;
+            z-index: 2;
+            padding: 15px 0px;
+
+            @media only screen and (min-width: 768px) {
+                &:after {
+                    content: '';
+                    background: $purple;
+                    position: absolute;
+                    top:0px;
+                    right: -32px;
+                    width: 70px;
+                    height: 100%;
+                    transform: skew(-4deg);
+                }
+            }
 
             // Grid
             grid-row-start: 1;
@@ -56,6 +47,7 @@ $left-logo-max-width: 350px;
             .logo-container {
                 width: 90%;
                 max-width: $left-logo-max-width;
+                z-index: 2;
 
                 img {
                     width: 100%;
@@ -64,25 +56,76 @@ $left-logo-max-width: 350px;
         }
 
         .card-right {
-            // Flex
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
             background: transparent;
+            width: 90%;
+            margin: auto;
+            overflow-x: auto;
+            z-index: 1;
 
-            img {
-                width: 30%;
-                max-width: 200px;
+
+            // Scroll Bar
+            &::-webkit-scrollbar {
+                height: 10px;
+                padding-bottom: 10px;
+            }
+            
+            // Track
+            &::-webkit-scrollbar-track {
+                //background: lightgray;
+                box-shadow: inset 0 0 5px lightgrey;
+                border-radius: 10px;
+            }
+            
+            // Handle
+            &::-webkit-scrollbar-thumb {
+                background: $purple;
+                border-radius: 10px;
+            }
+           
+            .img-container {
+                // Flex
+                display: flex;
+                align-items: flex-start;
+                padding: 30px 0px;
+                gap: 6%;
+
+                @media only screen and (min-width: 768px) {
+                    justify-content: center;
+                    min-width: 840px;
+                }
+               
+                .img-card {
+                    @media only screen and (min-width: 768px) {
+                        width: 25%;
+                    }
+
+                    .img {
+                        width: 51vw;
+                        min-width: 190px;
+
+                        @media only screen and (min-width: 768px) {
+                            width: 100%;
+                        }
+                    }
+
+                    h3 {
+                        text-transform: capitalize;
+                        margin-top: 8px;
+                    }
+                   
+                }
             }
         }
 
         a {
             // Grid
+            display: block;
             justify-self: center;
             grid-column-start: 2;
             background-color: $purple;
             padding: 10px 20px;
             margin-bottom: 15px;
+            margin-top: 42px;
         }
     }
 }

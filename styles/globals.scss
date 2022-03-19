@@ -1,8 +1,9 @@
 // Variables
-$white: #ffffff;
+$white: #FFFFFF;
 $black: #000000;
-$grey: #202028;
-$purple: #682cfc;
+$grey: #242424;
+$purple: #1592CA;
+$hover: #007EB4;
 
 // Css Reset
 * {
@@ -16,14 +17,23 @@ a {
   color: $white;
 }
 
-// body {
-//   background: linear-gradient(rgba(255, 255, 255, 0.747), rgba(255, 255, 255, 0.788)), 
-//   url('../public/backgrounds/background-pattern.jpg');
-//   background-size: cover;
-//   background-repeat: no-repeat;
-//   background-position: top;
-//   background-attachment: fixed;
-// }
+body {
+   // Scroll Bar
+   &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  // Track
+  &::-webkit-scrollbar-track {
+      background: $grey;
+  }
+
+  // Handle
+  &::-webkit-scrollbar-thumb {
+      background: $purple;
+      border-radius: 10px;
+  }
+}
 
 // Imports
 

@@ -12,10 +12,17 @@ function Xbox(games) {
                     </div>
                 </div>
                 <div className='card-right xbox-right'>
-                    {games.xbox.arr.map((game, index) => {
-                        const titleRegEx = game.title.replace(/[*]/g, '');
-                        return <img key={index} src={`https://static-cdn.jtvnw.net/ttv-boxart/${titleRegEx}-285x380.jpg`} />  
-                    })}
+                    <div className='img-container'>
+                        {games.xbox.arr.map((game, index) => {
+                            const titleRegEx = game.title.replace(/[*]/g, '');
+                            return (
+                                <div className='img-card'>
+                                    <img class='img' key={index} src={`https://static-cdn.jtvnw.net/ttv-boxart/${titleRegEx}-285x380.jpg`} /> 
+                                    <h3>{game.title.toLowerCase()}</h3>
+                                </div>
+                            ) 
+                        })}
+                    </div>
                 </div>
                 <a className='link' href="#">Xbox Games</a>
             </div>
