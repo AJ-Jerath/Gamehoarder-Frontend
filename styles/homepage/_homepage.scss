@@ -3,29 +3,13 @@
         width: 100%;
         text-align: center;
         padding-bottom: 30px;
+        color: $white;
     }
 
-    // First card no slant 
     .basecard-container {
         &:first-of-type {
             .basecard {
                 margin-top: 0px;
-            }
-        }
-
-        &:nth-of-type(odd) {
-            .basecard {
-                &::before {
-                    background: transparent;
-                }
-            }
-        }
-
-        &:nth-of-type(even) {
-            .basecard {
-                &::after {
-                    background: transparent;
-                }
             }
         }
     }

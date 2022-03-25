@@ -1,9 +1,15 @@
 // Variables
 $white: #FFFFFF;
-$black: #000000;
-$grey: #242424;
-$purple: #1592CA;
+$black: #1B2021;
+
+$grey: #3b3e45;
+$dark-grey: #0d0e10;
+$light-grey: #25272D;
+$blue: #055C9E;
 $hover: #007EB4;
+
+$blue-gradient: linear-gradient(180deg, hsla(206, 94%, 32%, 1) 0%, hsla(206, 94%, 40%, 1) 100%);
+$grey-gradient: radial-gradient(circle, hsla(220, 10%, 6%, 1) 0%, hsla(225, 10%, 16%, 1) 100%);
 
 // Css Reset
 * {
@@ -18,6 +24,8 @@ a {
 }
 
 body {
+  background: $dark-grey;
+
    // Scroll Bar
    &::-webkit-scrollbar {
     width: 10px;
@@ -25,12 +33,12 @@ body {
 
   // Track
   &::-webkit-scrollbar-track {
-      background: $grey;
+      background: $black;
   }
 
   // Handle
   &::-webkit-scrollbar-thumb {
-      background: $purple;
+      background: $blue-gradient;
       border-radius: 10px;
   }
 }
