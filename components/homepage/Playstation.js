@@ -17,7 +17,7 @@ function Playstation(games) {
                             const titleRegEx = game.title.replace(/[*]/g, '');
                             return (
                                 <div className='img-card'>
-                                    <img class='img' key={index} src={`https://static-cdn.jtvnw.net/ttv-boxart/${titleRegEx}-285x380.jpg`} alt={game.imageAlt}/> 
+                                    <img className='img' key={index} src={`https://static-cdn.jtvnw.net/ttv-boxart/${titleRegEx}-285x380.jpg`} alt={game.imageAlt}/> 
                                     <h3>{game.title.toLowerCase()}</h3>
                                 </div>
                             ) 

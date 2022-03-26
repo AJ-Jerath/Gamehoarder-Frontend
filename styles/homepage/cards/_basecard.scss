@@ -95,6 +95,8 @@ $left-logo-max-width: 350px;
                 }
                
                 .img-card {
+                    position: relative;
+
                     @media only screen and (min-width: 768px) {
                         width: 25%;
                     }
@@ -106,6 +108,17 @@ $left-logo-max-width: 350px;
                         @media only screen and (min-width: 768px) {
                             width: 100%;
                         }
+                    }
+
+                    .date {
+                        background: $blue-gradient;
+                        position: absolute;
+                        width: 100%;
+                        bottom: 34px;
+                        left: 0px;
+                        padding: 1.5%;
+                        text-align: center;
+                        text-transform: capitalize;
                     }
 
                     h3 {
