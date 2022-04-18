@@ -16,8 +16,8 @@ function Playstation(games) {
                         {games.playstation.arr.map((game, index) => {
                             const titleRegEx = game.title.replace(/[*]/g, '');
                             return (
-                                <div className='img-card'>
-                                    <img className='img' key={index} src={`https://static-cdn.jtvnw.net/ttv-boxart/${titleRegEx}-285x380.jpg`} alt={game.imageAlt}/> 
+                                <div className='img-card' key={index}>
+                                    <img className='img' src={`https://static-cdn.jtvnw.net/ttv-boxart/${titleRegEx}-285x380.jpg`} alt={game.imageAlt}/> 
                                     <h3>{game.title.toLowerCase()}</h3>
                                 </div>
                             ) 
