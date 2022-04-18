@@ -7,9 +7,10 @@ export default function Home({ data }) {
   return (
     <div id="homepage">
       <Hero />
-      <h1>Free Games</h1>
       <div className="container">
+        <h1>PC</h1>
         <Epic epic={data.games.epic}/>
+        <h1>Console</h1>
         <Xbox xbox={data.games.xbox}/>
         <Playstation playstation={data.games.playstation}/>
       </div>

@@ -1,3 +1,6 @@
+// Imports
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 // Variables
 $white: #FFFFFF;
 $black: #1B2021;
@@ -16,6 +19,8 @@ $grey-gradient: radial-gradient(circle, hsla(220, 10%, 6%, 1) 0%, hsla(225, 10%,
   box-sizing: border-box;
   padding: 0px;
   margin: 0px;
+
+  font-family: 'Poppins', sans-serif;
 }
 
 a {

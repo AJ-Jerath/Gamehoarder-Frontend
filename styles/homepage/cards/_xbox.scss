@@ -6,4 +6,8 @@ $xbox-lime-green: #9bf00b;
 
 #xbox {
     @include basecard;
+
+    .basecard {
+        margin-top: 0px;
+    }
 }

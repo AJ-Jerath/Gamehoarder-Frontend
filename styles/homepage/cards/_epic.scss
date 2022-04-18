@@ -4,4 +4,8 @@ $left-logo-max-width: 220px;
 
 #epic {
     @include basecard;
+
+    .basecard {
+        margin-bottom: 40px;
+    }
 }
