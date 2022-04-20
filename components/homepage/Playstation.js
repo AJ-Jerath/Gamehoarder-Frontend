@@ -14,7 +14,7 @@ function Playstation(games) {
                 <div className='card-right playstation-right'>
                     <div className='img-container'>
                         {games.playstation.arr.map((game, index) => {
-                            const titleRegEx = game.title.replace(/[*]/g, '');
+                            const titleRegEx = game.title.replace(/[*®]/g, '');
                             return (
                                 <div className='img-card' key={index}>
                                     <img className='img' src={`https://static-cdn.jtvnw.net/ttv-boxart/${titleRegEx}-285x380.jpg`} alt={game.imageAlt}/> 
