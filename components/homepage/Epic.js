@@ -47,8 +47,6 @@ function Epic(games) {
                                 }
                             });
 
-                            console.log(game.title)
-        
                             return (
                                 <div className='img-card' key={index}>
                                     <div className='img-container'>
