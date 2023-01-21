@@ -87,7 +87,6 @@ $left-logo-max-width: 350px;
                 gap: 5%;
 
                 .img-card {
-                    position: relative;
                     flex-shrink: 0;
                     width: 60%;
 
@@ -103,19 +102,23 @@ $left-logo-max-width: 350px;
                         margin-right: auto;
                     }
 
-                    .img {
-                        width: 100%;
-                    }
+                    .img-container {
+                        position: relative;
 
-                    .date {
-                        background: $blue-gradient;
-                        position: absolute;
-                        width: 100%;
-                        bottom: 34px;
-                        left: 0px;
-                        padding: 1.5%;
-                        text-align: center;
-                        text-transform: capitalize;
+                        .img {
+                            width: 100%;
+                        }
+    
+                        .date {
+                            background: $blue-gradient;
+                            position: absolute;
+                            width: 100%;
+                            bottom: 0px;
+                            left: 0px;
+                            padding: 1.5%;
+                            text-align: center;
+                            text-transform: capitalize;
+                        }
                     }
 
                     h3 {
