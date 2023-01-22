@@ -19,7 +19,7 @@ export default function Home({ data }) {
 }
 
 export async function getServerSideProps() {
-  const res = await fetch(`https://gamehoarder-backend-7dd2t.ondigitalocean.app/games`)
+  const res = await fetch(`https://www.gamehoarder.online/api/v1/games`)
   const data = await res.json()
 
   return { props: { data } }
