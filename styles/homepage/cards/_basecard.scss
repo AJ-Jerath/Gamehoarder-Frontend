@@ -128,16 +128,5 @@ $left-logo-max-width: 350px;
                 }
             }
         }
-
-        a {
-            // Grid
-            display: block;
-            justify-self: center;
-            grid-column-start: 2;
-            background-color: $blue-gradient;
-            padding: 10px 20px;
-            margin-bottom: 15px;
-            margin-top: 42px;
-        }
     }
 }

@@ -1,7 +1,7 @@
 import Hero from '../components/homepage/Hero';
-import Xbox from '../components/homepage/Xbox';
-import Epic from '../components/homepage/Epic';
-import Playstation from '../components/homepage/Playstation';
+import Xbox from '../components/homepage/cards/Xbox';
+import Epic from '../components/homepage/cards/Epic';
+import Playstation from '../components/homepage/cards/Playstation';
 
 export default function Home({ data }) {
   return (
